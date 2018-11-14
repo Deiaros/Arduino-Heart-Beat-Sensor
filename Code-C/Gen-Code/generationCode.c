@@ -1,6 +1,6 @@
 /*
 	Library for the generation of an arduino Library - gerationCode.c
-	Created by Thomas B. Varjavandi, November 14, 2018.
+	Created by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
 
