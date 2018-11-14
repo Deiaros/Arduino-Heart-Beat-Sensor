@@ -1,6 +1,6 @@
 /*
 	Arduino Library that controls & configures and LED heart - coeur.h
-	Created by Thomas B. Varjavandi, November 14, 2018.
+	Created by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
 #ifndef COEUR_H
