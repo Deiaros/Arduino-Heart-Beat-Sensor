@@ -1,6 +1,9 @@
+#ifndef menu.h
+#define menu.h
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define choice
-int choix (choice)
 
+int choix ()
+
+#endif
