@@ -1,9 +1,20 @@
 #include "menu.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
-int choix (choice)
+#include <unistd.h>
+
+int choix()
 {
-   printf("Quelle manière de s'allumer?\n0:pas de LED\n1:une LED sur deux \n2:une LED sur trois\n3:Toute les LEDs\n5 ou plus:quitter\n");
+   int choice;
+   printf("Quelle manière de s'allumer?\n0:pas de LED\n1:Toute les LEDs\n2:une LED sur deux\n3:une LED sur trois\n4a Hasard\n5 ou plus:quitter\n");
    scanf("%d", choice);
+   while(choice > -1 && choice < 6)
+   {
+      printf("ce n'est pas une option");
+      sleep(2)
+      system("CLS");
+      printf("Quelle manière de s'allumer?\n0:pas de LED\n1:Toute les LEDs\n2:une LED sur deux\n3:une LED sur trois\n4a Hasard\n5 ou plus:quitter\n");
+      scanf("%d", choice);
+   }
+   return choice;
 }
