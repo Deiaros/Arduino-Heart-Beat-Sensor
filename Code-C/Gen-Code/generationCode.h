@@ -1,6 +1,6 @@
 /*
 	Library for the generation of an arduino Library - gerationCode.h
-	Created by Thomas B. Varjavandi, November 14, 2018.
+	Created by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
 #ifndef GENERATECODE_H
