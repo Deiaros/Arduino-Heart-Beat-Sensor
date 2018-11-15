@@ -1,0 +1,95 @@
+#include "coeur.hpp" // appelle le header coeur.hpp (en c++)
+#include "param.hpp" // appelle du header param.pp (en c++)
+int led1 = 11; //
+int led2 = 2; //
+int led3 = 3; //
+int led4 = 4; //
+int led5 = 5; //
+int led6 = 6; // initialise les led sur leur entree sur la carte Arduino
+int led7 = 7; //
+int led8 = 8; //
+int led9 = 9; //
+int led10 = 10; //
+int menu; // variable du choix du menu
+
+void setup() {  // mise en place du programme
+  pinMode(led1, OUTPUT); // le mode de la led1 est en sortie, ce qui permet de l'allumer ou de l'Ã©teindre
+  pinMode(led2, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led5, OUTPUT);
+  pinMode(led6, OUTPUT);
+  pinMode(led7, OUTPUT);
+  pinMode(led8, OUTPUT);
+  pinMode(led9, OUTPUT);
+  pinMode(led10, OUTPUT);
+  Serial.begin(9600);  // definit les communications de donnees sur 9600 bauds
+  Serial.println("\t\tMenu\nVeuillez choisir une option en entrant un nombre et en appuyant sur entrée.\nNe pas oublier de mettre votre doigt dans la pince avant de commencer le programme.\n1) Toutes les LEDs allumées\n2) Une LED sur deux allumées\n3) Une LED sur trois allumées\n4) Choisir la LED voulue\n5) Allumage des LEDs en chenille\n6) Allumage des LEDs en demi-coeur\n7) Allumage des LEDs chenille une sur deux\n8) Allumage des LEDs de façon aléatoire\n9) Quitter programme\n"); // Ecrit dans la console Arduino, le menu
+  while(Serial.available() == 0){}
+    menu = Serial.parseInt();  // permet de demander a  l'utilisateur un entier, pour le choix du menu
+  Serial.println("Veuillez patienter");
+}
+
+void loop() {  // ce programme s'executera en boucle
+  int time = 10000;  // le temps est de 10s pour prendre des valeurs du pouls
+  float pouls; // declaration du pouls
+  float valeurPouls; // variable pour calculer le pouls moyen
+  float frequence;  // variable de calcul de la frequence cardiaque
+  int val;  // variable du menu du choix de la led
+  String affichage = "ms";  // permet d'afficher ms apres l'ecriture du temps du programme
+  int affis = 100;  // variable pour ecrire le temps du programme
+  int aleat;
+  if(menu == 9){  // si l'utilisateur veut quitter le programme l'animation d'attente se fait et le programme se quitte
+      Serial.println("Vous quittez le programme!");
+      Att(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10);
+      exit(0);
+  }
+  Serial.println("\tPrechauffage...");   // 
+  analogRead(0);                        // permet de prechauffer le capteur
+  Att(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10); //appelle la fonction Att qui fait une animation conviviale durant le prechauffage
+  Serial.println("le temps est de 10000 ms");
+  delay (1000);  // pause du programme pendant (1000 ms soit 1s)
+  while (time > 0) {                                          //
+   Serial.println(((1000.0 * 60.0) / (analogRead(0)))-100);  // calcul le pouls total avec le capteur
+   Serial.println(affis + affichage) ;                      //
+   pouls = pouls + ((1000.0 * 60.0) / (analogRead(0)))-100;//
+   delay(100);   //prend une valeur tous les : "suivant delay en ms"
+   time -= 100;  // time se decremente
+   affis += 100; // affis s'incremente pour afficher le temps d'execution du programme
+                   }
+ Serial.println("pouls : ");
+  valeurPouls = pouls/100;    //ici avec un delay(100) et un temps de 10000 on a 100 valeurs
+  Serial.println(valeurPouls); // retourne la valeur du pouls moyen
+  while (pouls != 0) {
+  frequence =((60/valeurPouls)*1000)/2;  // on calcul la frequence cardiaque moyenne de l'utilisateur et on divise par deux pour faire clignoter, au rythme, les LEDs
+  switch(menu) {
+    case (1) :
+      TenLEDs(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);  // on appelle la fonction TenLEDs
+      break;
+    case (2) :
+      OneOnTwo(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);
+      break;
+    case (3) :
+      OneOnThree(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);
+      break;
+    case (4) :
+      Serial.println("\nVeuillez choisir la led que vous souhaitez allumer : ");
+      while(Serial.available() == 0){}
+      val = Serial.parseInt();
+      ChooseOne(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, val, frequence);
+      break;  
+    case (5) :
+      Caterpillar(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);
+      break;
+    case (6):
+      DemiCoeur(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);
+      break;
+    case (7):
+      chenilleunesurdeux(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence);
+      break;
+    case (8):
+      Aleatoire(led1, led2, led3, led4, led5, led6, led7, led8, led9, led10, frequence, aleat);
+      break;
+  }
+  }
+}
