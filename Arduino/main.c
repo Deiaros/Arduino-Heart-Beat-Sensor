@@ -3,6 +3,8 @@
   Created by Thomas B. Varjavandi (Deiaros), November 15, 2018.
 */
 
+#include "coeur.h"
+
 int val = 0;
 
 Coeur coeur();
