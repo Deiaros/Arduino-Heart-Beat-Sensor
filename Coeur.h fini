@@ -1,0 +1,11 @@
+// ici on definit toutes les fonctions d'allumage des leds
+
+void TenLEDs(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void OneOnTwo(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void OneOnThree(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void ChooseOne(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, int val,float frequence);
+void Caterpillar(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void Att(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10);
+void chenilleunesurdeux(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void DemiCoeur(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence);
+void Aleatoire(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence, int aleat);
