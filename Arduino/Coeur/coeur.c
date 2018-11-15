@@ -3,7 +3,7 @@
 	Created by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
-#include "Arduino.h"
+#include "Arduino.h"   //bibliothèque de base d'arduino
 #include "coeur.h"
 #include "param.h"
 
