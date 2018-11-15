@@ -14,9 +14,7 @@ unsigned long time;
 Cardio:: Cardio()
 
 void Cardio::CardioDetection() 
-{
-   Serial.begin(9600);
-
+{ 
   Serial.println("Veuillez patienter vos informations sont en cours de traitement...");
 
   /*les informations sont en cours de traitement*/
