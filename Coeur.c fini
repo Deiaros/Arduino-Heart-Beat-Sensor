@@ -1,0 +1,517 @@
+#include "coeur.hpp"
+#include "param.hpp"
+#include <stdarg.h> // appelle la bibliothéque stdarg.h
+
+void Aleatoire(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence, int aleat) {  // fonction qui allume une led aleatoirement
+  aleat = random(1, 11);  // la variable aleat devient un nombre aleatoire compris entre 1 et 10 compris
+  if (aleat == 1) {  // si aleat vaut 1 la led 1 s'allume puis s'eteint
+    digitalWrite(led1, HIGH);
+    delay(frequence);
+    digitalWrite(led1, LOW);
+    delay(frequence);
+  }
+  if (aleat == 2) {
+    digitalWrite(led2, HIGH);
+    delay(frequence);
+    digitalWrite(led2, LOW);
+    delay(frequence);
+  }
+  if (aleat == 3) {
+    digitalWrite(led3, HIGH);
+    delay(frequence);
+    digitalWrite(led3, LOW);
+    delay(frequence);
+  }
+  if (aleat == 4) {
+    digitalWrite(led4, HIGH);
+    delay(frequence);
+    digitalWrite(led4, LOW);
+    delay(frequence);
+  }
+  if (aleat == 5) {
+    digitalWrite(led5, HIGH);
+    delay(frequence);
+    digitalWrite(led5, LOW);
+    delay(frequence);
+  }
+  if (aleat == 6) {
+    digitalWrite(led6, HIGH);
+    delay(frequence);
+    digitalWrite(led6, LOW);
+    delay(frequence);
+  }
+  if (aleat == 7) {
+    digitalWrite(led7, HIGH);
+    delay(frequence);
+    digitalWrite(led7, LOW);
+    delay(frequence);
+  }
+  if (aleat == 8) {
+    digitalWrite(led8, HIGH);
+    delay(frequence);
+    digitalWrite(led8, LOW);
+    delay(frequence);
+  }
+  if (aleat == 9) {
+    digitalWrite(led9, HIGH);
+    delay(frequence);
+    digitalWrite(led9, LOW);
+    delay(frequence);
+  }
+  if (aleat == 10) {
+    digitalWrite(led10, HIGH);
+    delay(frequence);
+    digitalWrite(led10, LOW);
+    delay(frequence);
+  }
+}
+
+void DemiCoeur(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {  // fonction avec les deux moities du coeur allumés separemment
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led3,HIGH);
+  digitalWrite(led4, HIGH);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, HIGH);
+  digitalWrite(led7, LOW);
+  digitalWrite(led8, LOW);
+  digitalWrite(led9, LOW);
+  digitalWrite(led10, LOW);
+  delay(frequence);
+  digitalWrite(led2, LOW);
+  digitalWrite(led1, LOW);
+  digitalWrite(led4, LOW);
+  digitalWrite(led3, LOW);
+  digitalWrite(led6, LOW);
+  digitalWrite(led5, LOW);
+  digitalWrite(led8, HIGH);
+  digitalWrite(led7, HIGH);
+  digitalWrite(led10, HIGH);
+  digitalWrite(led9, HIGH);
+  delay(frequence);
+}
+
+void chenilleunesurdeux(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {  // fonctions avec une led sur deux allumees avec rotation
+  digitalWrite(led1, HIGH);
+  digitalWrite(led2, LOW);
+  digitalWrite(led3,HIGH);
+  digitalWrite(led4, LOW);
+  digitalWrite(led5, HIGH);
+  digitalWrite(led6, LOW);
+  digitalWrite(led7, HIGH);
+  digitalWrite(led8, LOW);
+  digitalWrite(led9, HIGH);
+  digitalWrite(led10, LOW);
+  delay(frequence);
+  digitalWrite(led2, HIGH);
+  digitalWrite(led1, LOW);
+  digitalWrite(led4,HIGH);
+  digitalWrite(led3, LOW);
+  digitalWrite(led6, HIGH);
+  digitalWrite(led5, LOW);
+  digitalWrite(led8, HIGH);
+  digitalWrite(led7, LOW);
+  digitalWrite(led10, HIGH);
+  digitalWrite(led9, LOW);
+  delay(frequence);
+}
+
+void Att(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10){  // fonction d'attente
+  digitalWrite (led1, HIGH);
+  digitalWrite (led2, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led4, HIGH);
+  digitalWrite (led5, HIGH);
+  digitalWrite (led6, HIGH);
+  digitalWrite (led7, HIGH);
+  digitalWrite (led8, HIGH);
+  digitalWrite (led9, HIGH);
+  digitalWrite (led10, HIGH);
+  delay(200);
+  digitalWrite (led1,LOW);
+  digitalWrite (led2,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led4,LOW);
+  digitalWrite (led5,LOW);
+  digitalWrite (led6,LOW);
+  digitalWrite (led7,LOW);
+  digitalWrite (led8,LOW);
+  digitalWrite (led9,LOW);
+  digitalWrite (led10,LOW);
+  delay(100);
+  digitalWrite (led1, HIGH);
+  delay(50);
+  digitalWrite (led1, LOW);
+  delay(50);
+  digitalWrite (led2, HIGH);
+  delay(50);
+  digitalWrite (led2, LOW);
+  delay(50);
+  digitalWrite (led3, HIGH);
+  delay(50);
+  digitalWrite (led3, LOW);
+  delay(50);
+  digitalWrite (led4, HIGH);
+  delay(50);
+  digitalWrite (led4, LOW);
+  delay(50);
+  digitalWrite (led5, HIGH);
+  delay(50);
+  digitalWrite (led5, LOW);
+  delay(50);
+  digitalWrite (led6, HIGH);
+  delay(50);
+  digitalWrite (led6, LOW);
+  delay(50);
+  digitalWrite (led7, HIGH);
+  delay(50);
+  digitalWrite (led7, LOW);
+  delay(50);
+  digitalWrite (led8, HIGH);
+  delay(50);
+  digitalWrite (led8, LOW);
+  delay(50);
+  digitalWrite (led9, HIGH);
+  delay(50);
+  digitalWrite (led9, LOW);
+  delay(50);
+  digitalWrite (led10, HIGH);
+  delay(50);
+  digitalWrite (led10, LOW);
+  delay(50);
+  digitalWrite (led1,HIGH);
+  digitalWrite (led2,HIGH);
+  delay (100);
+  digitalWrite (led3,HIGH);
+  digitalWrite (led4,HIGH);
+  delay (100);
+  digitalWrite (led5,HIGH);
+  digitalWrite (led6,HIGH);
+  delay (100);
+  digitalWrite (led7,HIGH);
+  digitalWrite (led8,HIGH);
+  delay (100);
+  digitalWrite (led9,HIGH);
+  digitalWrite (led10,HIGH);
+  delay (100);
+  digitalWrite (led1,LOW);
+  digitalWrite (led2,LOW);
+  delay (100);
+  digitalWrite (led3,LOW);
+  digitalWrite (led4,LOW);
+  delay (100);
+  digitalWrite (led5,LOW);
+  digitalWrite (led6,LOW);
+  delay (100);
+  digitalWrite (led7,LOW);
+  digitalWrite (led8,LOW);
+  delay (100);
+  digitalWrite (led9,LOW);
+  digitalWrite (led10,LOW);
+  delay (100);
+  digitalWrite (led10,HIGH);
+  digitalWrite (led9,HIGH);
+  delay (100);
+  digitalWrite (led8,HIGH);
+  digitalWrite (led7,HIGH);
+  delay (100);
+  digitalWrite (led6,HIGH);
+  digitalWrite (led5,HIGH);
+  delay (100);
+  digitalWrite (led4,HIGH);
+  digitalWrite (led3,HIGH);
+  delay (100);
+  digitalWrite (led2,HIGH);
+  digitalWrite (led1,HIGH);
+  delay (100);
+  digitalWrite (led10,LOW);
+  digitalWrite (led9,LOW);
+  delay (100);
+  digitalWrite (led8,LOW);
+  digitalWrite (led7,LOW);
+  delay (100);
+  digitalWrite (led6,LOW);
+  digitalWrite (led5,LOW);
+  delay (100);
+  digitalWrite (led4,LOW);
+  digitalWrite (led3,LOW);
+  delay (100);
+  digitalWrite (led2,LOW);
+  digitalWrite (led1,LOW);
+  delay (100);
+  digitalWrite (led1, HIGH);
+  digitalWrite (led2, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led4, HIGH);
+  digitalWrite (led5, HIGH);
+  delay (100);
+  digitalWrite (led1,LOW);
+  digitalWrite (led2,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led4,LOW);
+  digitalWrite (led5,LOW);
+  digitalWrite (led6, HIGH);
+  digitalWrite (led7, HIGH);
+  digitalWrite (led8, HIGH);
+  digitalWrite (led9, HIGH);
+  digitalWrite (led10, HIGH);
+  delay (100);
+  digitalWrite (led6,LOW);
+  digitalWrite (led7,LOW);
+  digitalWrite (led8,LOW);
+  digitalWrite (led9,LOW);
+  digitalWrite (led10,LOW);
+  digitalWrite (led1, HIGH);
+  digitalWrite (led2, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led4, HIGH);
+  digitalWrite (led5, HIGH);
+  digitalWrite (led6, HIGH);
+  delay (200);
+  digitalWrite (led1,LOW);
+  digitalWrite (led2,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led4,LOW);
+  digitalWrite (led5,LOW);
+  digitalWrite (led6,LOW);
+  delay (100);
+  digitalWrite (led1, HIGH);
+  digitalWrite (led6, HIGH);
+  digitalWrite (led7, HIGH);
+  digitalWrite (led8, HIGH);
+  digitalWrite (led9, HIGH);
+  digitalWrite (led10, HIGH);
+  delay (200);
+  digitalWrite (led1,LOW);
+  digitalWrite (led6,LOW);
+  digitalWrite (led7,LOW);
+  digitalWrite (led8,LOW);
+  digitalWrite (led9,LOW);
+  digitalWrite (led10,LOW);
+  delay (100);
+  digitalWrite (led1, HIGH);
+  digitalWrite (led2, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led3, HIGH);
+  digitalWrite (led4, HIGH);
+  digitalWrite (led5, HIGH);
+  digitalWrite (led6, HIGH);
+  delay (200);
+  digitalWrite (led1,LOW);
+  digitalWrite (led2,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led3,LOW);
+  digitalWrite (led4,LOW);
+  digitalWrite (led5,LOW);
+  digitalWrite (led6,LOW);
+  delay (100);
+}
+
+void TenLEDs(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {  // creation de la fonction TenLEDs qui fera clignoter le coeur au rythme de frequence
+  digitalWrite(led1,HIGH); // la led 1 s'allume
+  digitalWrite(led2,HIGH);
+  digitalWrite(led3,HIGH);
+  digitalWrite(led4,HIGH);
+  digitalWrite(led5,HIGH);
+  digitalWrite(led6,HIGH);
+  digitalWrite(led7,HIGH);
+  digitalWrite(led8,HIGH);
+  digitalWrite(led9,HIGH);
+  digitalWrite(led10,HIGH);
+  delay(frequence);         // le programme attend le temps de frequence
+  digitalWrite(led1,LOW); // la led 1 s'eteint 
+  digitalWrite(led2,LOW);
+  digitalWrite(led3,LOW);
+  digitalWrite(led4,LOW);
+  digitalWrite(led5,LOW);
+  digitalWrite(led6,LOW);
+  digitalWrite(led7,LOW);
+  digitalWrite(led8,LOW);
+  digitalWrite(led9,LOW);
+  digitalWrite(led10,LOW);
+  delay(frequence);
+  }
+
+void OneOnTwo(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {  // la fonction fait clignoter une led sur deux
+    digitalWrite(led1,HIGH);
+    digitalWrite(led2,LOW);
+    digitalWrite(led3,HIGH);
+    digitalWrite(led4,LOW);
+    digitalWrite(led5,HIGH);
+    digitalWrite(led6,LOW);
+    digitalWrite(led7,HIGH);
+    digitalWrite(led8,LOW);
+    digitalWrite(led9,HIGH);
+    digitalWrite(led10,LOW);
+    delay(frequence);
+    digitalWrite(led1,LOW);
+    digitalWrite(led2,LOW);
+    digitalWrite(led3,LOW);
+    digitalWrite(led4,LOW);
+    digitalWrite(led5,LOW);
+    digitalWrite(led6,LOW);
+    digitalWrite(led7,LOW);
+    digitalWrite(led8,LOW);
+    digitalWrite(led9,LOW);
+    digitalWrite(led10,LOW);
+    delay(frequence);
+  }
+
+void OneOnThree(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {   // la fonction fait clignoter une led sur trois
+    digitalWrite(led1,LOW);
+    digitalWrite(led2,HIGH);
+    digitalWrite(led3,LOW);
+    digitalWrite(led4,LOW);
+    digitalWrite(led5,HIGH);
+    digitalWrite(led6,LOW);
+    digitalWrite(led7,LOW);
+    digitalWrite(led8,HIGH);
+    digitalWrite(led9,LOW);
+    digitalWrite(led10,LOW);
+    delay(frequence);
+    digitalWrite(led1,LOW);
+    digitalWrite(led2,LOW);
+    digitalWrite(led3,LOW);
+    digitalWrite(led4,LOW);
+    digitalWrite(led5,LOW);
+    digitalWrite(led6,LOW);
+    digitalWrite(led7,LOW);
+    digitalWrite(led8,LOW);
+    digitalWrite(led9,LOW);
+    digitalWrite(led10,LOW);
+    delay(frequence);
+}
+
+void ChooseOne(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, int val, float frequence) {  // la fonction fait clignoter la led choisie par l'utilisateur
+        switch (val) {  // le switch va, en fonction de val rentrer dans des cases
+        case 1 :  // si le case 1 (soit le cas ou l'utilisateur a  choisit 1) est vraie, le programme rentre dans cette case
+        while (frequence != 0) { // tant que le pouls est different de 0, le programme continu
+        digitalWrite (led1, HIGH);
+        delay(frequence);
+        digitalWrite (led1,LOW);
+        delay(frequence);
+        }
+        break;  // la case 1 se termine et le programme continu
+      case 2 :
+      while (frequence != 0) {
+        digitalWrite (led2, HIGH);
+        delay(frequence);
+        digitalWrite (led2,LOW);
+        delay(frequence);
+      }
+        break;
+      case 3 :
+      while (frequence != 0) {
+        digitalWrite (led3, HIGH);
+        delay(frequence);
+        digitalWrite (led3,LOW);
+        delay(frequence);
+      }
+        break;
+      case 4 :
+      while (frequence != 0) {
+        digitalWrite (led4, HIGH);
+        delay(frequence);
+        digitalWrite (led4,LOW);
+        delay(frequence);
+      }
+        break;
+      case 5 :
+        while (frequence != 0) {
+        digitalWrite (led5, HIGH);
+        delay(frequence);
+        digitalWrite (led5,LOW);
+        delay(frequence);
+        }
+        break;
+      case 6 :
+      while (frequence != 0) {
+        digitalWrite (led6, HIGH);
+        delay(frequence);
+        digitalWrite (led6,LOW);
+        delay(frequence);
+      }
+        break;
+      case 7 :
+      while (frequence != 0) {
+        digitalWrite (led7, HIGH);
+        delay(frequence);
+        digitalWrite (led7,LOW);
+        delay(frequence);
+      }
+        break;
+      case 8 :
+      while (frequence != 0) {
+        digitalWrite (led8, HIGH);
+        delay(frequence);
+        digitalWrite (led8,LOW);
+        delay(frequence);
+      }
+        break;
+      case 9 :
+      while (frequence != 0) {
+        digitalWrite (led9, HIGH);
+        delay(frequence);
+        digitalWrite (led9,LOW);
+        delay(frequence);
+      }
+        break;
+      case 10 :
+      while (frequence != 0) {
+        digitalWrite (led10, HIGH);
+        delay(frequence);
+        digitalWrite (led10,LOW);
+        delay(frequence);
+      }
+        break;
+    }
+  }
+
+void Caterpillar(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence) {  // la fonction allume le coeur en chenille
+    digitalWrite (led1, HIGH);
+    delay(frequence);
+    digitalWrite (led1,LOW);
+    delay(frequence);
+    digitalWrite (led2, HIGH);
+    delay(frequence);
+    digitalWrite (led2,LOW);
+    delay(frequence);
+    digitalWrite (led3, HIGH);
+    delay(frequence);
+    digitalWrite (led3,LOW);
+    delay(frequence);
+    digitalWrite (led4, HIGH);
+    delay(frequence);
+    digitalWrite (led4,LOW);
+    delay(frequence);
+    digitalWrite (led5, HIGH);
+    delay(frequence);
+    digitalWrite (led5,LOW);
+    delay(frequence);
+    digitalWrite (led6, HIGH);
+    delay(frequence);
+    digitalWrite (led6,LOW);
+    delay(frequence);
+    digitalWrite (led7, HIGH);
+    delay(frequence);
+    digitalWrite (led7,LOW);
+    delay(frequence);
+    digitalWrite (led8, HIGH);
+    delay(frequence);
+    digitalWrite (led8,LOW);
+    delay(frequence);
+    digitalWrite (led9, HIGH);
+    delay(frequence);
+    digitalWrite (led9,LOW);
+    delay(frequence);
+    digitalWrite (led10, HIGH);
+    delay(frequence);
+    digitalWrite (led10,LOW);
+    delay(frequence);
+} 
