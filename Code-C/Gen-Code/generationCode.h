@@ -8,7 +8,9 @@
 
 #define NUMELEM(x)  (sizeof(x) / sizeof((x)[0]))
 
-int generateCode(int choice)
-int printCode()
+void generateCode(int choice)
+void askPin()
+void checkRand()
+void printCode()
 
 #endif
