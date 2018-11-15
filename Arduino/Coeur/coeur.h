@@ -13,6 +13,7 @@ class Coeur
 {
 	public:
 		Coeur();
+		void checkHeart();
 		void lightCoeur();
 };
 
