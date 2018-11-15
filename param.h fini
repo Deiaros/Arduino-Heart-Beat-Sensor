@@ -1,0 +1,35 @@
+// dans ce header, on parametre la classe LEDs pour utiliser les fonctions du coeur.
+
+#ifndef LEDs_h  // debut de la definition de LEDs
+#define LEDs_h
+#include "Arduino.h"
+
+class LEDs {
+  public:
+    LEDs(int led1, int led2, int led3, int led4, int led5, int led6, int led7, int led8, int led9, int led10, float frequence, int val, int aleat);
+      void TenLEDs();
+      void OneOnTwo();
+      void OneOnThree();
+      void ChooseOne();
+      void Caterpillar();
+      void Att();
+      void chenilleunesurdeux();
+      void DemiCoeur();
+      void Aleatoire();
+   private:
+    int _led1;
+    int _led2;
+    int _led3;
+    int _led4; 
+    int _led5;
+    int _led6;
+    int _led7;
+    int _led8;
+    int _led9;
+    int _led10;
+    float _frequence;
+    int _val;
+    int _aleat;
+};
+
+#endif  // fin de la définition de LEDs
