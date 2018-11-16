@@ -12,15 +12,33 @@
 int choix()
 {
    int choice;
-   printf("Quelle manière de s'allumer?\n0:pas de LED\n1:Toute les LEDs\n2:une LED sur deux\n3:une LED sur trois\n4a Hasard\n5 ou plus:quitter\n");
+   printf("Quelle manière de s'allumer?");
+   printf("\n[0] : Pas de LED");
+   printf("\n[1] : Toute les LEDs");
+   printf("\n[2] : Toute les LED en chenille");
+   printf("\n[3] : Une LED sur deux");
+   printf("\n[4] : Une LED sur trois");
+   printf("\n[5] : A hasard");
+   printf("\n[6] : A votre choix");
+   printf("\n[7] : Quitter\n");
+
    scanf("%d", choice);
-   while(choice > -1 && choice < 6)
+   while(choice > -1 || choice < 6)
    {
       printf("ce n'est pas une option");
-      sleep(2)
+      sleep(2);
       system("CLS");
-      printf("Quelle manière de s'allumer?\n0:pas de LED\n1:Toute les LEDs\n2:une LED sur deux\n3:une LED sur trois\n4a Hasard\n5 ou plus:quitter\n");
+      printf("Quelle manière de s'allumer?");
+      printf("\n[0] : Pas de LED");
+      printf("\n[1] : Toute les LEDs");
+      printf("\n[2] : Toute les LED en chenille");
+      printf("\n[3] : Une LED sur deux");
+      printf("\n[4] : Une LED sur trois");
+      printf("\n[5] : A hasard");
+      printf("\n[6] : A votre choix");
+      printf("\n[7] : Quitter\n");
       scanf("%d", choice);
    }
+
    return choice;
 }
