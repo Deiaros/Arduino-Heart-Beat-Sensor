@@ -4,17 +4,17 @@
 	Created by Thomas B. Varjavandi (Deiaros), November 16, 2018.
 */
 
-#include <stdio.h>
+#include <stdio.h> //on inclus nos bibliothèques ainsi que les bibliothèques standardes de C
 #include <stdlib.h>
 #include <unistd.h>
 
 #include "menu.h"
 #include "generateCode.h"
 
-int choice;
+int choice; //on crée la variable choice (choix en français)
 
 void main()
 {
-	choice = choix();
-	generateCode(choice);
+	choice = choix(); //si choice équivaut à choix
+	generateCode(choice);//on fait la fonction generateCode en utilisant choice
 }
