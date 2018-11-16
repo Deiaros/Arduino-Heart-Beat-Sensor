@@ -1,18 +1,12 @@
-/**************************************************
 
- * Capteur infrarouge et le phototransistor permettent de détecter les pulsations cardiaques.
+// Capteur infrarouge et le phototransistor permettent de détecter les pulsations cardiaques.
 
- * On enregistre les données brutes pendant 5s .
-
- **************************************************/
-
-
-#include "cardio.h"
+#include "cardio.h" //on ajoute la bibliothèque cardio.h
 
 
 void setup() 
 {
-   Serial.begin(9600);
+   Serial.begin(9600); //on génére la "mémoire" que l'on souhaite utiliser avec notre Arduino.
 
 
 }    
@@ -20,7 +14,7 @@ void setup()
 
 void loop() 
 {
- cardio.CardioDetection();
+ cardio.CardioDetection(); //
  cardio.CalculPouls();
  delay(5000);
 }
