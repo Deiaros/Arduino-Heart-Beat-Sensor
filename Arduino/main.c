@@ -8,6 +8,8 @@ Coeur Coeur;//on va chercher la fonction coeur dans la classe coeur
 
 int val = 0; //on initie la variable val
 int check = 0; //on initie la variable check
+int bob = 0;
+int kool;
 
 void setup() // fonction de préparation
 {
@@ -16,6 +18,8 @@ void setup() // fonction de préparation
 
 void loop() // fonction que l'arduino va faire en boucle
 {
+  bob=val
+  kool
   val = analogRead(A0); //on affecte à val la valeur du port A0
   Serial.println(val); //on affiche la val
   if(val < 200) // si val est inférieur à 200
