@@ -14,6 +14,7 @@ void setup()
 
 void loop() 
 {
- cardio.CardioDetection(); //on effectue la fonction CardioDetection dans cardio
+ cardio.CardioDetection(); //on effectue la fonction CardioDetection dans 
+ cardio.CalculPouls(); // on calcule le pouls
  delay(5000); //on demande au programme d'attendre 5 seconde
 }
