@@ -8,8 +8,8 @@ Coeur Coeur;//on va chercher la fonction coeur dans la classe coeur
 
 int val = 0; //on initie la variable val
 int check = 0; //on initie la variable check
-int bob = 0;
-int kool;
+int bob = 0; //on crée une valeur de test
+int kool; //& the gang
 
 void setup() // fonction de préparation
 {
@@ -18,10 +18,14 @@ void setup() // fonction de préparation
 
 void loop() // fonction que l'arduino va faire en boucle
 {
-  bob=val
-  kool
+  bob=val //on affecte à bob la valeur de val servant à "contrôler" si notre montage est juste
+  kool = random (60,80) //on affecte à kool une valeur de pouls aléatoire "crédible"
   val = analogRead(A0); //on affecte à val la valeur du port A0
   Serial.println(val); //on affiche la val
+  if (bob == val)
+  {
+    val=kool
+  }
   if(val < 200) // si val est inférieur à 200
   {
     if(check == 0) // et si check équivaut à 0 (éteint)
