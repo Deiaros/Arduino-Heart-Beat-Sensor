@@ -8,16 +8,16 @@
 
 #include "Arduino.h" //on ajoute la bibliothèque Arduino.h...
 
-#define NUMELEM(x)  (sizeof(x) / sizeof((x)[0]))
+#define NUMELEM(x)  (sizeof(x) / sizeof((x)[0])) //on défini NUMELEM variable permettant de chercher dans un tableau
 
 class Coeur //on ajoute la classe de fonction Coeur
 {
 	public: //qu'on installe en global (public est visible dans tout le programme possédant un accès à cette bibliothèque)
 		Coeur(); //fonction Coeur
-		void lightCoeur(); //fonction lightCoeur (lumière sur le coeur en bon françois)
-		int l = 0;
-		int check = 0;
-		int chenille = 1;
+		void lightCoeur(); //fonction lightCoeur-->lumière coeur
+		int l = 0; //on initie la variable l équivalente à 0
+		int check = 0; //on initie la variable check permettant de vérifier l'état de nos LED, ici éteint (0)
+		int chenille = 1;//et on initie la variable chenille
 	private:
 };
 
