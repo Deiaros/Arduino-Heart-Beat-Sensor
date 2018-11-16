@@ -9,8 +9,8 @@
 #define NUMELEM(x)  (sizeof(x) / sizeof((x)[0])) // on crée NUMELEMEN défini grâce à un tableau
 
 void generateCode(int choice) //fonction generateCode utilisant choice
-void askPin() //fonction askpin (demande port)
-void checkRand() //fonction checkRand (vérification aléatoire
+int askPin() //fonction askpin (demande port)
+int checkRand() //fonction checkRand (vérification aléatoire
 void printCode() //fonction printCode
 
 #endif
