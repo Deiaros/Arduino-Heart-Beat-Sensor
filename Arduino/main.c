@@ -2,20 +2,33 @@
   Arduino main file that runs basic functions - main.c
   Created by Thomas B. Varjavandi (Deiaros), November 15, 2018.
 */
+#include "coeur.h"
 
-#include "coeur.h" //on ajoute notre bibliothèque contenant tous nos prototypes de fonctions
+Coeur Coeur;
 
-int val = 0; //on crée notre variable qui va récupérer la valeur du "récepteur IR"
+int val = 0;
+int check = 0;
 
-Coeur coeur(); //fonction coeur qui provient de la classe coeur (elle a du coeur)
-
-void setup() //fonction de préparation...
+void setup()
 {
-	//...est agrémentée dans les fichiers qui avaient besoin d'une accrémentation	
+ Serial.begin(9600);
 }
 
-void loop()  //fonction que l'arduino va effectuer en continue (en boucle --> loop==boucle)
+void loop()
 {
-	val = analogRead(A0); 	//on affecte la valeur transmsise par le récepteur IR (et lu par la petite LED du montage cardio) à notre variable 
-	checkHeart(val);	//on effectue la fonction checkHeart avec la valeur obtenue
+  val = analogRead(A0);
+  Serial.println(val);
+  if(val < 200)
+  {
+    if(check == 0)
+    {
+      Coeur.lightCoeur(HIGH);
+      check = 1;
+    }
+  }
+  else
+  {
+    Coeur.lightCoeur(LOW);
+    check = 0;
+  }
 }
