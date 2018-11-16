@@ -4,10 +4,11 @@
    Editied by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
-#include "menu.h" //bibliothèques
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
+#include "menu.h" //bibliothèques
 
 int choix() //fonction choix
 {
@@ -22,8 +23,8 @@ int choix() //fonction choix
    printf("\n[6] : A votre choix");
    printf("\n[7] : Quitter\n");
 
-   scanf("%d", choice);
-   while(choice > -1 || choice < 6) //si son choix est impossible, on lui demande (gentiment) de le refaire
+   scanf("%d", &choice);
+   /*while(choice > -1 || choice < 6) //si son choix est impossible, on lui demande (gentiment) de le refaire
    {
       printf("ce n'est pas une option!!!");
       sleep(2);
@@ -38,7 +39,7 @@ int choix() //fonction choix
       printf("\n[6] : A votre choix");
       printf("\n[7] : Quitter\n");
       scanf("%d", choice);
-   }
+   }*/
 
    return choice;
 }
