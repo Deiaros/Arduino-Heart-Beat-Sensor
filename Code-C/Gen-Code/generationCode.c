@@ -10,8 +10,10 @@
 #include <unistd.h>
 
 int ledarray[];
+int chenille = 0;
 int lenrand = random(1,10);
 int numrand = random(2,12);
+
 
 
 void generateCode(int choice)
@@ -19,18 +21,22 @@ void generateCode(int choice)
 	switch(choice)
 	{
 		case 0:
-			return;
+			ledarray = {0};
 			break;
 		case 1:
 			ledarray = {2,3,4,5,6,7,8,9,10,11} //toutes
 			break;
-		case 2:
-			ledarray = {2,4,6,8,10} //should we put 11 ? 1/2
+		case 2: //chenille
+			ledarray = {2,3,4,5,6,7,8,9,10,11} //toutes
+			chenille = 1;
 			break;
 		case 3:
-			ledarray = {2,5,8,11} //1/3
+			ledarray = {2,4,6,8,10} //should we put 11 ? 1/2
 			break;
 		case 4:
+			ledarray = {2,5,8,11} //1/3
+			break;
+		case 5:
 			for(int i = 0; i < lenrand; i++) //aleatoire
 			{
 				ledarray[i] = numrand;
@@ -40,7 +46,7 @@ void generateCode(int choice)
 				}
 			}
 			break;
-		case 5:
+		case 6: //ask pins
 			pin = askPin()
 			ledarray[0] = pin;
 			break;
@@ -79,6 +85,16 @@ void printCode()
 	{
 		frpintf(prm, "%d,", choice[i]);
 	}
-	frpintf(prm, "%d};\n\n#endif", choice[lenary]);
+	frpintf(prm, "%d};\nint max = %d;", choice[lenary], choice[lenary]);
+	if(chenille == 1)
+	{
+		frpintf(prm, "\nint chenille = 1;");
+	}
+	else
+	{
+		frpintf(prm, "\nint chenille = 0;");
+	}
+	frpintf(prm, "\n\n#endif");
 	fclose(prm);
+
 }
