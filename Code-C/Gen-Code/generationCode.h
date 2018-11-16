@@ -4,13 +4,13 @@
 */
 
 #ifndef GENERATECODE_H
-#define GENERATECODE_H
+#define GENERATECODE_H // on defini GENERATECODE_H
 
-#define NUMELEM(x)  (sizeof(x) / sizeof((x)[0]))
+#define NUMELEM(x)  (sizeof(x) / sizeof((x)[0])) // on crée NUMELEMEN défini grâce à un tableau
 
-void generateCode(int choice)
-void askPin()
-void checkRand()
-void printCode()
+void generateCode(int choice) //fonction generateCode utilisant choice
+void askPin() //fonction askpin (demande port)
+void checkRand() //fonction checkRand (vérification aléatoire
+void printCode() //fonction printCode
 
 #endif
