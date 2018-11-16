@@ -22,9 +22,9 @@ void loop() // fonction que l'arduino va faire en boucle
   kool = random (60,80) //on affecte à kool une valeur de pouls aléatoire "crédible"
   val = analogRead(A0); //on affecte à val la valeur du port A0
   Serial.println(val); //on affiche la val
-  if (bob == val)
+  if (bob == val) // et si val n'a pas varié=problème de montage...
   {
-    val=kool
+    val=kool //...donc on modifie val par une valeur aléatoire crédible
   }
   if(val < 200) // si val est inférieur à 200
   {
