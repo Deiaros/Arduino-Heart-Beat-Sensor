@@ -1,7 +1,7 @@
 /*
 	Arduino Library that controls & configures and LED heart - coeur.h
 	Created by Antoine F. Merlingeas (Orme), November 14, 2018.
-   Editied by Thomas B. Varjavandi (Deiaros), November 14, 2018.
+   	Editied by Thomas B. Varjavandi (Deiaros), November 14, 2018.
 */
 
 #include "menu.h" //on inclus menu.h ainsis que les bibliothèques standard
