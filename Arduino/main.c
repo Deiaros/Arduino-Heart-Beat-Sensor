@@ -2,7 +2,7 @@
   Arduino main file that runs basic functions - main.c
   Created by Thomas B. Varjavandi (Deiaros), November 15, 2018.
 */
-#include "coeur.h"
+#include "coeur.h" //on inclus la bibliothèque que nous avons crée
 
 Coeur Coeur;
 
