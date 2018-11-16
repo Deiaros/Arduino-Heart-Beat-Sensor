@@ -1,16 +1,16 @@
-/*permet inclure la bibliothèque qu'une seule fois*/
+//permet inclure la bibliothèque qu'une seule fois
 #ifndef Cardio_h
-#define Cardio_h
-#include "Arduino.h"
+#define Cardio_h //on crée la variable Cardio_h
+#include "Arduino.h" //on y inclus la bibliothèque de base d'Arduino
 
-class Cardio
+class Cardio //on crée la classe Cardio
 {
-  public : /*La partie "public" est utilisable dans tous les programmes qui utilisent la bibliothèque*/
-  Cardio ();
-  void CardioDetection();
-  void CalculPouls();
-  int valeurPrecedente;
-  long tempsPrecedent;
+  public : //En globale (donc utilisable dans tous les programme utilisant cette bibliothèque
+  Cardio ();  //on crée la fonction Cardio
+  void CardioDetection(); //on crée la fonction CardioDetection
+  void CalculPouls(); //on crée la fonction CalculPouls
+  int valeurPrecedente; //on crée la variable valeur précédente, servant à stocker la...valeur précédente
+  long tempsPrecedent; //idem pour le temps
   
 };
 
