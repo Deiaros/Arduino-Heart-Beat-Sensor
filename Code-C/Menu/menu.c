@@ -24,22 +24,6 @@ int choix() //fonction choix
    printf("\n[7] : Quitter\n");
 
    scanf("%d", &choice);
-   /*while(choice > -1 || choice < 6) //si son choix est impossible, on lui demande (gentiment) de le refaire
-   {
-      printf("ce n'est pas une option!!!");
-      sleep(2);
-      system("CLS");
-      printf("Quelle manière de s'allumer?");
-      printf("\n[0] : Pas de LED");
-      printf("\n[1] : Toute les LEDs");
-      printf("\n[2] : Toute les LED en chenille");
-      printf("\n[3] : Une LED sur deux");
-      printf("\n[4] : Une LED sur trois");
-      printf("\n[5] : A hasard");
-      printf("\n[6] : A votre choix");
-      printf("\n[7] : Quitter\n");
-      scanf("%d", choice);
-   }*/
 
    return choice;
 }
