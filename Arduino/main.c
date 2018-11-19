@@ -17,12 +17,12 @@ void setup()
 
 void loop()
 {
-	kool= random(60;100)
-	bob=val;
+	kool = random(60;100)
+	bob = val;
 	val = analogRead(A0);
 	checkHeart(val);
- If(bob==val)
+ 	If(bob == val)
  	{
-	 val=kool
+	 val = kool;
  	}
 }
