@@ -1,6 +1,7 @@
 /*
   Arduino main file that runs basic functions - main.c
   Created by Thomas B. Varjavandi (Deiaros), November 15, 2018.
+  Editied by Antoine F. Merlingeas (Orme), November 16, 2018.
 */
 
 int val = 0;
