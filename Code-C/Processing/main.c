@@ -2,8 +2,6 @@
 
   *Created by :
     * Joana Cazaurang
-    * Thomas Varjavandi
-    * Antoine Merlingeas
 
 -----------------*/
 
